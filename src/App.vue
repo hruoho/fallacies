@@ -1,18 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container-fluid" id="app">
+    <CardDeck title="Our cognitive biases" source="https://yourbias.is" :rawData="biasData"/>
+    <CardDeck title="Our logical fallacies" source="https://yourfallacy.is" :rawData="fallacyData"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CardDeck from './components/CardDeck.vue'
+
+import biasData from '../bias.json'
+import fallacyData from '../fallacies.json'
 
 export default {
   name: 'app',
+  data () {
+    return  {
+      biasData,
+      fallacyData
+    }
+  },
   components: {
-    HelloWorld
-  }
+    CardDeck
+  },
 }
 </script>
 
@@ -25,4 +34,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
