@@ -1,12 +1,12 @@
 <template>
   <div class="container-fluid" id="app">
-    <CardDeck title="Our cognitive biases" source="https://yourbias.is" :rawData="biasData"/>
-    <CardDeck title="Our logical fallacies" source="https://yourfallacy.is" :rawData="fallacyData"/>
+    <Nav />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import CardDeck from './components/CardDeck.vue'
+import Nav from './components/Nav.vue'
 
 import biasData from '../bias.json'
 import fallacyData from '../fallacies.json'
@@ -20,7 +20,7 @@ export default {
     }
   },
   components: {
-    CardDeck
+    Nav
   },
 }
 </script>
@@ -32,7 +32,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 </style>
