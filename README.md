@@ -1,4 +1,13 @@
-# bias
+# Bias & Fallacy
+
+A light wrapper / simplifier over yourfallacy.is and yourbias.is. 
+
+TODO: 
+- Add router & simple nav bar to choose between bias & fallacy
+- Add a possibility to sort alpahabetically
+- Add buttons for 1-4 columns layout
+- Decorate with colors & graphics
+- ???
 
 ## Project setup
 ```
